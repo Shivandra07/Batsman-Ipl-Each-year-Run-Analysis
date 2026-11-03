@@ -6,8 +6,8 @@ import plotly.express as px
 import dash
 from dash import Dash,html,dcc,Input,Output
 # import data
-deliveries=pd.read_csv("Dataset/deliveries.csv")
-matches=pd.read_csv('Dataset/matches.csv')
+deliveries=pd.read_csv("dataset/deliveries.csv")
+matches=pd.read_csv('dataset/matches.csv')
 # merge data
 matches=matches.rename(columns={'id':'match_id'})
 dataset=deliveries.merge(matches,on='match_id')
